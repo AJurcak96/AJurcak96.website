@@ -1,0 +1,424 @@
+/* CSS for the background */
+.background {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Background styling */
+.background {
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: none;
+}
+
+/* Music icon styling */
+.music-icon {
+    font-size: 24px;
+}
+
+/* Button for music */
+.btnMusic {
+    border: 2px solid white;
+    border-radius: 10%;
+    color: white;
+    background-color: rgb(107, 21, 177, 0.9);
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button hover effect */
+.btnMusic:hover {
+    background-color: rgb(107, 21, 177, 0.9);
+    color: white;
+    border: 2px solid rgb(107, 21, 177, 0.9);
+}
+
+/* Styling for general buttons */
+.btn,
+.transparent-btn {
+    border: 2px solid white;
+    color: white;
+    background-color: rgb(107, 21, 177, 0.9);
+    font-weight: 700;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button hover effect */
+.btn:hover,
+.transparent-btn:hover {
+    background-color: white;
+    color: rgb(107, 21, 177, 0.9);
+    border: 2px solid rgb(107, 21, 177, 0.9);
+}
+
+/* Custom popover styling */
+.custom-popover,
+.custom-popover .popover-body {
+    background-color: transparent;
+}
+
+/* Custom popover - HEADER */
+.custom-popover .popover-header {
+    background-color: rgb(107, 21, 177, 0.9);
+    color: white;
+}
+
+/* Popover body styling */
+.popover-body {
+    color: white;
+    font-size: 1.5em;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Introduction container styling */
+.container-introduction {
+    max-height: 100vh;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex: 1;
+    margin: 2em 0 7em 0;
+    padding-right: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container styling */
+.container {
+    height: 100vh;
+    width: 100%;
+    flex: 1;
+    margin: auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 4em;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card styling */
+.card {
+    background-color: #f0f0f0;
+    height: 16.3em;
+    width: 25em;
+    margin: 2em 0 2em 0;
+    place-self: center;
+    border: 10px;
+}
+
+/* Card header styling */
+.card-header {
+    font-weight: bold;
+    font-size: 1em;
+    background-color: rgb(107, 21, 177, 0.9);
+    color: white;
+    margin-bottom: 1em;
+}
+
+/* Card body styling */
+.card-body {
+    background-color: white;
+    padding: 1em;
+    border-radius: 5%;
+}
+
+/* Card title styling */
+.card-title {
+    color: purple;
+    font-size: 1.5em;
+}
+
+/* Card text styling */
+.card-text {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* Space on the right, direction github icon inside of card */
+.picture-logo{
+    margin-right: 0.5em;
+    height: 1.5em;
+    width: 1.5em;
+    transition: all 0.3s ease;
+}
+
+/* Space on the right, direction github icon inside of card */
+.picture-logo:hover{
+    margin-right: 0.5em;
+    height: 2em;
+    width: 2em;
+}
+
+/* Arrow Up - take to the top of the page */
+.arrow-up{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Image container styling */
+.imageDiv {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5rem;
+}
+
+/* Image styling */
+.myImage {
+    width: 22rem;
+    height: 26rem;
+    border: 3px solid purple;
+    border-radius: 5%;
+    float: left;
+    margin-right: 2%;
+}
+
+/* Introduction styling */
+.Introduction {
+    color: white;
+    font-family: "Permanent Marker";
+    font-size: 1.7rem;
+}
+
+/* Introduction container styling */
+.container-introduction {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Row styling */
+.row {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: 10em 0 5em 0;
+    flex: 1;
+}
+
+/* Passion section styling */
+#passion {
+    margin: 3em 4em 0 4em;
+}
+
+/* Passion text styling */
+.passionText {
+    font-family: "Bebas Neue", sans-serif;
+    color: white;
+    font-size: 1.2em;
+}
+
+/* Footer styling */
+#footer {
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 100%;
+    height: 5em;
+}
+
+/* Margin bottom for some elements */
+.mb-3 {
+    color: white;
+    margin-left: 5%;
+    font-size: 1.4em;
+}
+
+/* Icons styling */
+#icons {
+    margin-right: 2em;
+}
+
+/* Icons on the bottom right of the page, for different websites, social networks */
+.bi-github,
+.bi-facebook,
+.bi-linkedin {
+    height: 1.5em;
+    width: 1.5em;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for icons */
+.bi-github:hover,
+.bi-facebook:hover,
+.bi-linkedin:hover {
+    height: 2em;
+    width: 2em;
+}
+
+/* Media query for screens up to 1662px */
+@media screen and (max-width: 1662px) {
+    .custom-popover {
+        font-size: 0.7em;
+    }
+
+    .custom-popover .popover-header {
+        background-color: rgb(107, 21, 177, 1);
+        color: white;
+    }
+
+    .custom-popover .popover-body {
+        color: white;
+    }
+
+    .imageDiv {
+        top: 10rem;
+        margin-left: 4em;
+    }
+
+    .Introduction {
+        margin-top: 6em;
+    }
+}
+
+/* Media query for screens up to 991px */
+@media screen and (max-width: 991px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .card-title {
+        font-size: 1.4em;
+    }
+
+    .card-text {
+        font-size: 1.1em;
+    }
+
+    .card {
+        max-width: 75%;
+        height: 15em;
+    }
+
+    #footer {
+        margin-top: 10em;
+    }
+}
+
+/* Media query for screens up to 600px */
+@media screen and (max-width: 600px) {
+    .myImage {
+        float: none;
+    }
+    .card {
+        width: 20em;
+        height: 16em;
+    }
+    .Introduction {
+        margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .Introduction {
+        margin-top: 1em;
+        font-size: 1.2em;
+    }
+}
+
+/* Media query for screens up to 391px */
+@media screen and (max-width: 391px) {
+    #passion {
+        margin: 6em 4em 0em 4em;
+    }
+    .card {
+        width: 20em;
+        height: 20em;
+    }
+
+    .myImage {
+        width: 17rem;
+        height: 21rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .Introduction {
+        margin-top: 1em;
+        font-size: 1.1em;
+    }
+}
+
+/* Media query for screens up to 265px */
+@media screen and (max-width: 265px) {
+    .Introduction{
+        font-size: 1.4em;
+        margin-left: 1.3em;
+        margin-right: 1.3em;
+    }
+    .card {
+        width: 15em;
+        height: 23em;
+    }
+    .mb-3.mb-md-0 {
+        font-size: 0.7em !important;
+    }
+    .myImage {
+        width: 12.8rem;
+        height: 15rem;
+        position: relative;
+        left: 0.9em;
+        top: 3rem;
+    }
+    .custom-popover {
+        font-size: 0.8em;
+    }
+    .bi-github,
+    .bi-facebook,
+    .bi-linkedin {
+    height: 1.5em;
+    width: 1.5em;
+    transition: all 0.3s ease;
+    }
+    /* Hover effect for icons */
+    .bi-github:hover,
+    .bi-facebook:hover,
+    .bi-linkedin:hover {
+    height: 2em;
+    width: 2em;
+    }
+    .music-text{
+        position: relative;
+        top: 1em;
+        right: 1em;
+    }
+    .btnMusic{
+        position: relative;
+        top: 1em;
+        right: 1em;
+    }
+}
+
+@media screen and (max-width: 284px) {
+    .mb-3.mb-md-0 {
+        font-size: 0.5em !important;
+    }
+    @media screen and (max-width: 430px) {
+        .myImage {
+            width: 12.8rem;
+            height: 15rem;
+            position: relative;
+            left: 0.2em;
+            top: 2rem;
+        }
+        .Introduction {
+            margin-top: 1em;
+            margin-left: 1em;
+        }
+    }
+}
