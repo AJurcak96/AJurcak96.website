@@ -329,6 +329,9 @@
         margin-top: 1em;
         font-size: 1.2em;
     }
+    .myImage {
+        margin-left: 1em;
+    }
 }
 
 /* Media query for screens up to 391px */
@@ -342,8 +345,9 @@
     }
 
     .myImage {
-        width: 17rem;
+        width: 18rem;
         height: 21rem;
+        margin-left: 1em;
     }
 }
 
