@@ -306,8 +306,12 @@
     }
 
     #footer {
-        margin-top: 10em;
-    }
+    margin-top: 5em;
+  }
+  /* Arrow Up - take to the top of the page */
+  .arrow-up {
+    margin-bottom: 0;
+  }
 }
 
 /* Media query for screens up to 600px */
