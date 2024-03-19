@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
 var audio = document.getElementById("bgMusic");
 
 // Set the volume to 10% (0.1)
-audio.volume = 0.1;
+audio.volume = 0.4;
 
 // Create an audio element
   var audio = new Audio();
