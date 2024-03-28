@@ -209,17 +209,21 @@
 
 /* Row styling */
 .row {
-    max-width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    margin: 10em 0 5em 0;
-    flex: 1;
+  max-width: 100%;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  margin: 10em 0 5em 0;
+  flex: 1;
 }
 
 /* Passion section styling */
 #passion {
-    margin: 3em 4em 0 4em;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Passion text styling */
