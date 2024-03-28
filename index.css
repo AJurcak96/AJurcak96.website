@@ -325,6 +325,20 @@
   }
 }
 
+/* Media query for screens up to 853px */
+@media screen and (max-width: 853px) {
+  .Introduction {
+    font-size: 1.2rem;
+  }
+}
+
+/* Media query for screens up to 768px */
+@media screen and (max-width: 768px) {
+  .Introduction {
+    font-size: 1.1rem;
+  }
+}
+
 /* Media query for screens up to 600px */
 @media screen and (max-width: 600px) {
     .myImage {
