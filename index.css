@@ -167,8 +167,9 @@
   right: 20px;
   margin-bottom: 4em;
   z-index: 99;
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  color: purple;
+  font-weight: bold;
   border: none;
   border-radius: 50%;
   width: 40px;
