@@ -322,9 +322,10 @@
     #footer {
     margin-top: 5em;
   }
-  /* Arrow Up - take to the top of the page */
-  .arrow-up {
-    margin-bottom: 0;
+  /* Row styling */
+  .row {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
