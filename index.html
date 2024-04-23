@@ -19,64 +19,80 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
 
-  <body class="background" background="./background2.jpg">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="container-fluid justify-content-between">
-        <!-- Quotation mark link-->
-        <button
-          id="popoverBtn"
-          type="button"
-          class="btn btn-secondary transparent-btn"
-          data-bs-toggle="popover"
-          data-bs-placement="left"
-          data-bs-custom-class="custom-popover"
-          data-bs-title="Friedrich Gauss, Mathmetician and Physicist"
-          data-bs-content="It is not knowledge, but the act of learning, not possession, but the act of getting there which generates the greatest satisfaction."
-        >
-          Get Inspired
-        </button>
-        <div class="music-section">
-          <audio id="bgMusic" src="./DireStraits-WalkOfLife.mp3" autoplay loop>
-            <p>
-              If you are reading this, it is because your browser does not
-              support the audio element.
-            </p>
-          </audio>
-        </div>
-        <h1
-          class="music-text"
-          style="
-            color: white;
-            margin-left: auto;
-            font-size: 1.2em;
-            font-family: Permanent Marker, cursive;
-          "
-        >
-          Music&nbsp;&nbsp;
-        </h1>
-        <div>
-          <button class="btnMusic" id="toggleMusic">
-            <span id="musicIcon" class="music-icon">🔊</span>
-            <!-- Speaker symbol -->
+  <body>
+    <header>
+      <!-- Hamburger Menu Icon -->
+      <span class="menu-toggle">&#9776;</span>
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <div class="container-fluid justify-content-between">
+          <!-- Quotation mark link-->
+          <button
+            id="popoverBtn"
+            type="button"
+            class="btn btn-secondary transparent-btn"
+            style="margin-bottom: 0.3em"
+            data-bs-toggle="popover"
+            data-bs-placement="left"
+            data-bs-custom-class="custom-popover"
+            data-bs-title="Friedrich Gauss, Mathmetician and Physicist"
+            data-bs-content="It is not knowledge, but the act of learning, not possession, but the act of getting there which generates the greatest satisfaction."
+          >
+            Get Inspired
           </button>
+          <div class="music-section">
+            <audio
+              id="bgMusic"
+              src="./music/DireStraits-WalkOfLife.mp3"
+              autoplay
+              loop
+            >
+              <p>
+                If you are reading this, it is because your browser does not
+                support the audio element.
+              </p>
+            </audio>
+          </div>
+          <div class="music-container">
+            <h1
+              class="music-text"
+              style="
+                color: var(--color2);
+                margin-left: auto;
+                font-size: 1.2em;
+                font-weight: bold;
+                align-self: center;
+                padding-bottom: 0.4em;
+              "
+            >
+              Music&nbsp;&nbsp;
+            </h1>
+            <button class="btnMusic" id="toggleMusic">
+              <span id="musicIcon" class="music-icon">🔊</span>
+              <!-- Speaker symbol -->
+            </button>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </header>
 
     <!-- Introduction section -->
     <div class="container-introduction">
       <div class="imageDiv">
         <div>
-          <img class="myImage" src="./photo-of-me-2.jpg" />
+          <img class="myImage" src="./Images/photo-of-me-2.jpg" />
           <div class="Introduction-body-text">
             <!-- Introduction -->
-            <h1 class="Introduction" style="color: orange; font-size: 2.2rem">
+            <h1
+              class="Introduction-hello"
+              style="color: var(--color2); font-size: 2rem"
+            >
               Hey there!
             </h1>
             <!-- Introduction text -->
-            <p class="Introduction">
-              I'm Aleksandar, a sports lover, music enthusiast, and avid
+            <p class="Introduction-text">
+              My name is Aleksandar, a sports lover, music enthusiast, and avid
               gamer.<br />
               Whether it's hitting the field, grooving to tunes,<br />
               or diving into virtual worlds.<br />
@@ -89,103 +105,27 @@
       </div>
     </div>
 
-    <!-- My passion section -->
-    <div class="row">
-      <div id="passion" class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="none"
-          focusable="false"
-        >
-          <title></title>
-          <image
-            href="./sport-picture.jpg"
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-          />
-        </svg>
-        <p class="passionText">
-          As a kid, I played football, and now I still hit the field when I can.
-          It's more than just exercise, it's nostalgic, relaxing, and keeps me
-          fit. Football has always been a source of joy and stress relief for
-          me.
-        </p>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div id="passion" class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="none"
-          focusable="false"
-        >
-          <title></title>
-          <image
-            href="./headphones-music.jpg"
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-          />
-        </svg>
-        <p class="passionText">
-          I love listening to music, it's my go-to for lifting my spirits. It's
-          more than just a hobby; it's a source of joy and comfort. Music
-          transcends language barriers, connects me with others, and adds depth
-          to every moment.
-        </p>
-      </div>
-      <!-- /.col-lg-2 -->
-      <div id="passion" class="col-lg-4">
-        <svg
-          class="bd-placeholder-img rounded-circle"
-          width="140"
-          height="140"
-          xmlns="http://www.w3.org/2000/svg"
-          role="img"
-          aria-label="Placeholder"
-          preserveAspectRatio="none"
-          focusable="false"
-        >
-          <title></title>
-          <image
-            href="./game-on-picture.jpg"
-            x="0"
-            y="0"
-            width="100%"
-            height="100%"
-          />
-        </svg>
-        <p class="passionText">
-          Exploring the world of gaming is a passion of mine. I'm drawn to its
-          immersive experiences, creativity, and sense of accomplishment. Gaming
-          offers a unique form of entertainment, full of endless challenges and
-          opportunities for social interaction. It's something that constantly
-          engages and excites me.
-        </p>
-      </div>
-      <!-- /.col-lg-2 -->
-    </div>
-
     <!-- Cards Section -->
     <div class="container">
+      <div class="my-projects-container">
+        <div class="my-projects-title">
+          <span style="--i: 1">P</span>
+          <span style="--i: 2">r</span>
+          <span style="--i: 3">o</span>
+          <span style="--i: 4">j</span>
+          <span style="--i: 5">e</span>
+          <span style="--i: 6">c</span>
+          <span style="--i: 7">t</span>
+          <span style="--i: 8">s</span>
+        </div>
+      </div>
       <div class="card">
         <div class="card-body" style="position: relative">
           <div class="card-header">Project 1</div>
           <h5 class="card-title">Chop Chop Salon</h5>
           <p class="card-text">
-            This template provides spaces for images and text for a simple Friseur Salon website.
+            This template provides spaces for images and text for a simple
+            Friseur Salon website.
           </p>
           <div
             style="
@@ -200,7 +140,7 @@
           >
             <a
               style="text-decoration: none"
-              href="./chop-chop-salon-pic.png"
+              href="./Images/chop-chop-salon-pic.png"
               target="_blank"
             >
               <svg
@@ -208,7 +148,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-image"
                 viewBox="0 0 16 16"
               >
@@ -218,12 +158,15 @@
                 />
               </svg>
             </a>
-            <a href="https://github.com/AJurcak96/Chop-Chop-Salon" target="_blank">
+            <a
+              href="https://github.com/AJurcak96/Chop-Chop-Salon"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
               >
@@ -254,13 +197,17 @@
               margin-left: 1em;
             "
           >
-            <a style="text-decoration: none" href="./Convert-Ease.png" target="_blank">
+            <a
+              style="text-decoration: none"
+              href="./Images/Convert-Ease.png"
+              target="_blank"
+            >
               <svg
                 class="picture-logo"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-image"
                 viewBox="0 0 16 16"
               >
@@ -275,7 +222,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
               >
@@ -292,7 +239,8 @@
           <div class="card-header">Project 3</div>
           <h5 class="card-title">Tape Time</h5>
           <p class="card-text">
-            VHS - Store website, with some welcome text, movie genres and contact info.
+            VHS - Store website, with some welcome text, movie genres and
+            contact info.
             <br />
           </p>
           <div
@@ -308,7 +256,7 @@
           >
             <a
               style="text-decoration: none"
-              href="./tape-time-pic.png"
+              href="./Images/tape-time-pic.png"
               target="_blank"
             >
               <svg
@@ -316,7 +264,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-image"
                 viewBox="0 0 16 16"
               >
@@ -335,7 +283,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
               >
@@ -368,7 +316,7 @@
           >
             <a
               style="text-decoration: none"
-              href="./TD-Commerce.png"
+              href="./Images/TD-Commerce.png"
               target="_blank"
             >
               <svg
@@ -376,7 +324,7 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
                 class="bi bi-image"
                 viewBox="0 0 16 16"
               >
@@ -391,7 +339,62 @@
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                fill="purple"
+                fill="var(--color3)"
+                class="bi bi-github"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body" style="position: relative">
+          <div class="card-header">Project 5</div>
+          <h5 class="card-title">GameHub</h5>
+          <p class="card-text">
+            GameHub is a platform for gamers to engage in discussions.
+          </p>
+          <div
+            style="
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              display: flex;
+              margin-bottom: 1em;
+              margin-left: 1em;
+            "
+          >
+            <a
+              style="text-decoration: none"
+              href="./Images/Gamehub-pic.png"
+              target="_blank"
+            >
+              <svg
+                class="picture-logo"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="var(--color3)"
+                class="bi bi-image"
+                viewBox="0 0 16 16"
+              >
+                <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                <path
+                  d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"
+                />
+              </svg>
+            </a>
+            <a href="https://github.com/AJurcak96/GameHub" target="_blank">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="var(--color3)"
                 class="bi bi-github"
                 viewBox="0 0 16 16"
               >
@@ -411,11 +414,13 @@
     <!-- Footer section -->
     <footer
       id="footer"
-      class="d-flex flex-wrap justify-content-between align-items-center py-3"
+      class="d-flex flex-nowrap justify-content-between align-items-center py-3"
     >
       <!-- Footer - Name -->
-      <div class="col-md-4 d-flex align-items-center">
-        <span class="mb-3 mb-md-0" style="font-size: 1em"
+      <div class="footer-container col-md-4 d-flex align-items-center">
+        <span
+          class="mb-1 mb-md-0"
+          style="font-size: 1em; color: var(--color2); margin-left: 1rem"
           >Aleksandar Jurcak</span
         >
       </div>
@@ -432,7 +437,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width="28"
               height="28"
-              fill="white"
+              fill="var(--color2)"
               class="bi bi-facebook"
               viewBox="0 0 16 16"
             >
@@ -450,7 +455,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width="28"
               height="28"
-              fill="white"
+              fill="var(--color2)"
               class="bi bi-github"
               viewBox="0 0 16 16"
             >
@@ -468,7 +473,7 @@
               xmlns="http://www.w3.org/2000/svg"
               width="28"
               height="28"
-              fill="white"
+              fill="var(--color2)"
               class="bi bi-linkedin"
               viewBox="0 0 16 16"
             >
