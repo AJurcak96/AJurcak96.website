@@ -1,162 +1,250 @@
-/* CSS for the background */
-.background {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+/* Root for background color */
+:root {
+  --color1: #61677a;
+  --color2: #d8d9da;
+  --color3: #272829;
 }
 
-/* Background styling */
-.background {
-    background-size: cover;
-    background-size: 100% 100%;
+body {
+  background-color: var(--color2);
 }
 
 /* Navbar styling */
 .navbar {
-    background-color: none;
+  background-color: var(--color3);
+  height: 100%;
+}
+
+/* Hamburger menu icon */
+.menu-toggle {
+  display: none;
+  /* Hidden by default */
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: var(--color3);
+  color: var(--color2);
+  transition: all 0.1s ease;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Hamburger menu icon - hover */
+.menu-toggle:hover {
+  color: grey;
+}
+
+.menu-toggle.active {
+  justify-content: right;
+}
+
+/* Content of menu-toggle is displayed */
+.menu-toggle.active + .navbar {
+  display: block;
+}
+
+/* Music container */
+.music-container {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 0;
 }
 
 /* Music icon styling */
 .music-icon {
-    font-size: 24px;
+  font-size: 24px;
 }
 
 /* Button for music */
 .btnMusic {
-    border: 2px solid white;
-    border-radius: 10%;
-    color: white;
-    background-color: rgb(107, 21, 177, 0.9);
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s;
+  border: 2px solid var(--color3);
+  border-radius: 10%;
+  color: var(--color3);
+  background-color: var(--color3);
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 1em;
 }
 
 /* Button hover effect */
 .btnMusic:hover {
-    background-color: rgb(107, 21, 177, 0.9);
-    color: white;
-    border: 2px solid rgb(107, 21, 177, 0.9);
+  background-color: white;
+  color: var(--color3);
+  border: 2px solid var(--color3);
+}
+
+/* Button active effect */
+.btnMusic:active {
+  background-color: var(--color3);
+  color: var(--color3);
+  border: 2px solid var(--color3);
 }
 
 /* Styling for general buttons */
 .btn,
 .transparent-btn {
-    border: 2px solid white;
-    color: white;
-    background-color: rgb(107, 21, 177, 0.9);
-    font-weight: 700;
-    transition: background-color 0.3s, color 0.3s;
+  border: 2px solid var(--color3);
+  color: var(--color2);
+  background-color: var(--color3);
+  font-weight: 700;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.1em;
 }
 
 /* Button hover effect */
 .btn:hover,
 .transparent-btn:hover {
-    background-color: white;
-    color: rgb(107, 21, 177, 0.9);
-    border: 2px solid rgb(107, 21, 177, 0.9);
+  background-color: white;
+  color: var(--color3);
+  border: 2px solid var(--color3);
 }
 
 /* Custom popover styling */
 .custom-popover,
 .custom-popover .popover-body {
-    background-color: transparent;
+  background-color: var(--color2);
 }
 
 /* Custom popover - HEADER */
 .custom-popover .popover-header {
-    background-color: rgb(107, 21, 177, 0.9);
-    color: white;
+  background-color: var(--color3);
+  color: var(--color2);
 }
 
 /* Popover body styling */
 .popover-body {
-    color: white;
-    font-size: 1.5em;
-    border-radius: 5px;
-    padding: 10px;
+  color: var(--color3);
+  font-size: 1.5em;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 /* Introduction container styling */
 .container-introduction {
-    max-height: 100vh;
-    max-width: 100%;
-    box-sizing: border-box;
-    flex: 1;
-    margin: 2em 0 7em 0;
-    padding-right: 5em;
-    display: flex;
-    justify-content: center;
+  background-color: var(--color3);
+  max-width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  margin: 0;
+  padding-right: 5em;
+  display: flex;
+  justify-content: center;
+  animation: gradient-animation 18s ease infinite;
+}
+
+.Introduction-text {
+  color: var(--color2);
+  font-size: 1.5em;
+  font-weight: 500;
 }
 
 /* Container styling */
 .container {
-    height: 100vh;
-    width: 100%;
-    flex: 1;
-    margin: auto;
-    margin-top: 5em;
-    margin-bottom: 5em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 4em;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  max-width: 100%;
+  flex: 1;
+  display: grid;
+  padding: 10rem 20rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 2em;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    300deg,
+    var(--color3),
+    var(--color1),
+    var(--color2)
+  );
+  background-size: 180% 180%;
+  animation: gradient-animation 5s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.my-projects-title {
+  text-align: center;
+  color: white;
+  padding-top: 3rem;
+  width: 100%;
+  position: relative;
+}
+.my-projects-title span {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+  color: #fff;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
 }
 
 /* Card styling */
 .card {
-    background-color: #f0f0f0;
-    height: 16.3em;
-    width: 25em;
-    margin: 2em 0 2em 0;
-    place-self: center;
-    border: 10px;
+  background-color: #f0f0f0;
+  height: 16.3em;
+  width: 25em;
+  margin: 2em 0 2em 0;
+  place-self: center;
+  border: 10px;
 }
 
 /* Card header styling */
 .card-header {
-    font-weight: bold;
-    font-size: 1em;
-    background-color: rgb(107, 21, 177, 0.9);
-    color: white;
-    margin-bottom: 1em;
+  font-weight: bold;
+  font-size: 1em;
+  background-color: var(--color3);
+  color: white;
+  margin-bottom: 1em;
 }
 
 /* Card body styling */
 .card-body {
-    background-color: white;
-    padding: 1em;
-    border-radius: 5%;
+  background-color: white;
+  padding: 1em;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 /* Card title styling */
 .card-title {
-    color: purple;
-    font-size: 1.5em;
+  color: 0.5;
+  font-size: 1.5em;
 }
 
 /* Card text styling */
 .card-text {
-    font-size: 1.2em;
-    font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 600;
 }
 
 /* Space on the right, direction github icon inside of card */
-.picture-logo{
-    margin-right: 0.5em;
-    height: 1.5em;
-    width: 1.5em;
-    transition: all 0.3s ease;
+.picture-logo {
+  margin-right: 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+  transition: all 0.3s ease;
 }
 
 /* Space on the right, direction github icon inside of card */
-.picture-logo:hover{
-    margin-right: 0.5em;
-    height: 2em;
-    width: 2em;
+.picture-logo:hover {
+  margin-right: 0.5em;
+  height: 2em;
+  width: 2em;
 }
 
 /* Scroll to the top button */
@@ -167,8 +255,8 @@
   right: 20px;
   margin-bottom: 4em;
   z-index: 99;
-  background-color: white;
-  color: purple;
+  background-color: var(--color3);
+  color: white;
   font-weight: bold;
   border: none;
   border-radius: 50%;
@@ -179,45 +267,35 @@
 
 /* Image container styling */
 .imageDiv {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 5rem;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+  height: 100%;
 }
 
 /* Image styling */
 .myImage {
-    width: 22rem;
-    height: 26rem;
-    border: 3px solid purple;
-    border-radius: 5%;
-    float: left;
-    margin-right: 2%;
+  width: 22rem;
+  height: 26rem;
+  border: 3px ridge var(--color2);
+  border-radius: 5%;
+  float: left;
+  margin-right: 2%;
 }
 
-/* Introduction styling */
-.Introduction {
-    color: white;
-    font-family: "Permanent Marker";
-    font-size: 1.7rem;
+/* Introduction - HEY THERE */
+.Introduction-hello {
+  color: white;
+  font-family: "Permanent Marker";
+  font-size: 1.5em;
 }
 
 /* Introduction container styling */
 .container-introduction {
-    display: flex;
-    flex-direction: row;
-}
-
-/* Row styling */
-.row {
-  max-width: 100%;
-  height: 100vh;
+  display: flex;
+  flex-direction: row;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  margin: 10em 0 5em 0;
-  flex: 1;
+  border-bottom: 4px solid #ffec9e;
 }
 
 /* Passion section styling */
@@ -229,229 +307,190 @@
 
 /* Passion text styling */
 .passionText {
-    font-family: "Bebas Neue", sans-serif;
-    color: white;
-    font-size: 1.2em;
+  font-family: "Bebas Neue", sans-serif;
+  color: white;
+  font-size: 1.2em;
 }
 
 /* Footer styling */
 #footer {
-    margin-top: auto;
-    margin-bottom: auto;
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    font-weight: 400;
-    width: 100%;
-    height: 5em;
+  background-color: var(--color3);
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
 }
 
 /* Margin bottom for some elements */
 .mb-3 {
-    color: white;
-    margin-left: 5%;
-    font-size: 1.4em;
+  color: white;
+  margin-left: 5%;
+  font-size: 1.4em;
 }
 
 /* Icons styling */
 #icons {
-    margin-right: 2em;
+  margin-right: 2em;
 }
 
 /* Icons on the bottom right of the page, for different websites, social networks */
 .bi-github,
 .bi-facebook,
 .bi-linkedin {
-    height: 1.5em;
-    width: 1.5em;
-    transition: all 0.3s ease;
+  height: 1.5em;
+  width: 1.5em;
+  transition: all 0.3s ease;
 }
 
 /* Hover effect for icons */
 .bi-github:hover,
 .bi-facebook:hover,
 .bi-linkedin:hover {
-    height: 2em;
-    width: 2em;
+  height: 2em;
+  width: 2em;
 }
 
 /* Media query for screens up to 1662px */
 @media screen and (max-width: 1662px) {
-    .custom-popover {
-        font-size: 0.7em;
-    }
+  .custom-popover {
+    font-size: 0.7em;
+  }
 
-    .custom-popover .popover-header {
-        background-color: rgb(107, 21, 177, 1);
-        color: white;
-    }
-
-    .custom-popover .popover-body {
-        color: white;
-    }
-
-    .imageDiv {
-        top: 10rem;
-        margin-left: 4em;
-    }
+  .imageDiv {
+    margin-left: 4em;
+  }
 }
 
 /* Media query for screens up to 991px */
 @media screen and (max-width: 991px) {
-    .container {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .card-title {
-        font-size: 1.4em;
-    }
-
-    .card-text {
-        font-size: 1.1em;
-    }
-
-    .card {
-        max-width: 75%;
-        height: 15em;
-    }
-
-    #footer {
-    margin-top: 5em;
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+    width: 100%;
+    padding: 0;
   }
+
+  .card-title {
+    font-size: 1.4em;
+  }
+
+  .card-text {
+    font-size: 1.1em;
+  }
+
+  .card {
+    max-width: 75%;
+    height: 15em;
+  }
+
   /* Row styling */
   .row {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
-}
 
-/* Media query for screens up to 853px */
-@media screen and (max-width: 853px) {
-  .Introduction {
-    font-size: 1.2rem;
-  }
-}
-
-/* Media query for screens up to 768px */
-@media screen and (max-width: 768px) {
-  .Introduction {
-    font-size: 1.1rem;
+  /* Image styling */
+  .myImage {
+    float: none;
+    margin: 0 0 3rem 0;
   }
 }
 
 /* Media query for screens up to 600px */
 @media screen and (max-width: 600px) {
-    .myImage {
-        float: none;
-    }
-    .card {
-        width: 20em;
-        height: 16em;
-    }
-    .Introduction {
-        margin-top: 2em;
-    }
+  .myImage {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .card {
+    width: 20em;
+    height: 16em;
+  }
+  /* Container styling */
+  .container {
+    padding: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  /* Row styling */
+  .row {
+    margin: 20em 0 5em 0;
+  }
 }
 
 @media screen and (max-width: 430px) {
-    .Introduction {
-        margin-top: 1em;
-        font-size: 1.2em;
-    }
-    .myImage {
-        margin-left: 1em;
-    }
+  .myImage {
+    margin-left: 1%;
+  }
+  .row {
+    margin: 10em 0 5em 0;
+  }
 }
 
 /* Media query for screens up to 391px */
 @media screen and (max-width: 391px) {
-    #passion {
-        margin: 6em 4em 0em 4em;
-    }
-    .card {
-        width: 20em;
-        height: 20em;
-    }
-
-    .myImage {
-        width: 18rem;
-        height: 21rem;
-        margin-left: 1em;
-    }
+  .card {
+    width: 20em;
+    height: 20em;
+  }
+  .myImage {
+    width: 16rem;
+    height: 19rem;
+    margin-left: 1em;
+  }
+  .Introduction {
+    margin-left: 1em;
+  }
+  /* Music container */
+  .music-container {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  /* Navbar styling */
+  .navbar {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    justify-content: right;
+  }
+  #footer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  #icons {
+    margin-right: 0%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
+/* Media query for screens up to 320px */
 @media screen and (max-width: 320px) {
-    .Introduction {
-        margin-top: 1em;
-        font-size: 1.1em;
-    }
-}
-
-/* Media query for screens up to 265px */
-@media screen and (max-width: 265px) {
-    .Introduction{
-        font-size: 1.4em;
-        margin-left: 1.3em;
-        margin-right: 1.3em;
-    }
-    .card {
-        width: 15em;
-        height: 23em;
-    }
-    .mb-3.mb-md-0 {
-        font-size: 0.7em !important;
-    }
-    .myImage {
-        width: 12.8rem;
-        height: 15rem;
-        position: relative;
-        left: 0.9em;
-        top: 3rem;
-    }
-    .custom-popover {
-        font-size: 0.8em;
-    }
-    .bi-github,
-    .bi-facebook,
-    .bi-linkedin {
-    height: 1.5em;
-    width: 1.5em;
-    transition: all 0.3s ease;
-    }
-    /* Hover effect for icons */
-    .bi-github:hover,
-    .bi-facebook:hover,
-    .bi-linkedin:hover {
-    height: 2em;
-    width: 2em;
-    }
-    .music-text{
-        position: relative;
-        top: 1em;
-        right: 1em;
-    }
-    .btnMusic{
-        position: relative;
-        top: 1em;
-        right: 1em;
-    }
-}
-
-@media screen and (max-width: 284px) {
-    .mb-3.mb-md-0 {
-        font-size: 0.5em !important;
-    }
-    @media screen and (max-width: 430px) {
-        .myImage {
-            width: 12.8rem;
-            height: 15rem;
-            position: relative;
-            left: 0.2em;
-            top: 2rem;
-        }
-        .Introduction {
-            margin-top: 1em;
-            margin-left: 1em;
-        }
-    }
+  .Introduction {
+    font-size: 1.4em;
+    margin-left: 1.3em;
+    margin-right: 1.3em;
+  }
+  .card {
+    width: 15em;
+    height: 23em;
+  }
+  .mb-3.mb-md-0 {
+    font-size: 0.7em !important;
+  }
+  .myImage {
+    width: 12.8rem;
+    height: 15rem;
+  }
+  .custom-popover {
+    font-size: 0.8em;
+  }
 }
