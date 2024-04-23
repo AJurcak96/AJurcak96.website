@@ -1,15 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize Bootstrap popover
-    var popoverTriggerEl = document.getElementById('popoverBtn');
-    var popover = new bootstrap.Popover(popoverTriggerEl);
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize Bootstrap popover
+  var popoverTriggerEl = document.getElementById("popoverBtn");
+  var popover = new bootstrap.Popover(popoverTriggerEl);
 
-    // Close popover when clicking outside
-    document.addEventListener('click', function (event) {
-        var isClickInside = popoverTriggerEl.contains(event.target) || popover._element.contains(event.target);
-        if (!isClickInside) {
-            popover.hide();
-        }
-    });
+  // Close popover when clicking outside
+  document.addEventListener("click", function (event) {
+    var isClickInside =
+      popoverTriggerEl.contains(event.target) ||
+      popover._element.contains(event.target);
+    if (!isClickInside) {
+      popover.hide();
+    }
+  });
 });
 
 // Get the audio element by its ID
@@ -19,48 +21,49 @@ var audio = document.getElementById("bgMusic");
 audio.volume = 0.4;
 
 // Create an audio element
-  var audio = new Audio();
-  
-  // Set the audio source
-  audio.src = "./music/Lynyrd Skynyrd Free Bird.mp3";
-  
-  // Autoplay the audio
-  audio.autoplay = true;
-  
-  // Loop the audio
-  audio.loop = true;
-  
-  // Append the audio element to the document body
-  document.body.appendChild(audio);
+var audio = new Audio();
 
-    // Get the audio element by its ID
-    var audio = document.getElementById("bgMusic");
-  
-  // Start playing the background music when the page loads
-  window.addEventListener('load', function() {
-      var audio = document.getElementById('bgMusic');
-      audio.play();
-  });
+// Set the audio source
+audio.src = "./music/Lynyrd Skynyrd Free Bird.mp3";
 
-  document.addEventListener("DOMContentLoaded", function() {
-    const bgMusic = document.getElementById("bgMusic");
-    const toggleButton = document.getElementById("toggleMusic");
-    const musicIcon = document.getElementById("musicIcon");
+// Autoplay the audio
+audio.autoplay = true;
 
-    toggleButton.addEventListener("click", function() {
-        if (bgMusic.paused) {
-            bgMusic.play();
-            musicIcon.textContent = "🔊"; // Speaker symbol when playing
-        } else {
-            bgMusic.pause();
-            musicIcon.textContent = "🔇"; // Muted speaker symbol when paused
-        }
-    });
+// Loop the audio
+audio.loop = true;
+
+// Append the audio element to the document body
+document.body.appendChild(audio);
+
+// Get the audio element by its ID
+var audio = document.getElementById("bgMusic");
+
+// Start playing the background music when the page loads
+window.addEventListener("load", function () {
+  var audio = document.getElementById("bgMusic");
+  audio.play();
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const bgMusic = document.getElementById("bgMusic");
+  const toggleButton = document.getElementById("toggleMusic");
+  const musicIcon = document.getElementById("musicIcon");
+
+  toggleButton.addEventListener("click", function () {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      musicIcon.textContent = "🔊"; // Speaker symbol when playing
+    } else {
+      bgMusic.pause();
+      musicIcon.textContent = "🔇"; // Muted speaker symbol when paused
+    }
+  });
+});
 
 // Show the button when scrolling down
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+  scrollFunction();
+};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -75,3 +78,43 @@ function scrollToTop() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }
+
+// --- Hamburger Menu --- //
+
+// Select the menu toggle element
+const menuToggle = document.querySelector(".menu-toggle");
+
+// Select the buttons inside the header nav link
+const headerNavButtons = document.querySelectorAll(".navbar");
+
+// Function to handle clicks anywhere else on the document
+function handleClickOutside(event) {
+  // Check if the clicked element is not the menu toggle, its child, one of the buttons, or the input field
+  if (
+    !menuToggle.contains(event.target) &&
+    ![...headerNavButtons].includes(event.target)
+  ) {
+    // Collapse the menu by removing the 'active' class from the menu toggle
+    menuToggle.classList.remove("active");
+  }
+}
+
+// Function to collapse the menu when the screen is resized
+function handleResize() {
+  // Check if the menu toggle has the 'active' class
+  if (menuToggle.classList.contains("active")) {
+    // Collapse the menu by removing the 'active' class from the menu toggle
+    menuToggle.classList.remove("active");
+  }
+}
+
+// Add click event listener to the document body to handle clicks anywhere else on the document
+document.body.addEventListener("click", handleClickOutside);
+
+// Add click event listener to the menu toggle to toggle its 'active' class
+menuToggle.addEventListener("click", function () {
+  this.classList.toggle("active");
+});
+
+// Add resize event listener to the window object to handle screen resizing
+window.addEventListener("resize", handleResize);
