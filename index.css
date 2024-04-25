@@ -311,6 +311,11 @@ body {
   color: var(--color4);
 }
 
+/* Image container */
+.imageDiv {
+  padding: 0 1rem;
+}
+
 /* Image styling */
 .myImage {
   max-width: 100%;
