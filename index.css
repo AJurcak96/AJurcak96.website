@@ -514,6 +514,7 @@ body {
   }
   .navbar {
     display: none;
+    border-bottom: 1px solid var(--color2);
   }
   .menu-toggle {
     display: flex;
