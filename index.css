@@ -310,8 +310,8 @@ body {
 }
 
 /* Apply animation on button click */
-#scrollToTopBtn:focus {
-  animation: jump 0.6s ease;
+#scrollToTopBtn:active {
+  animation: jump 0.5s ease;
   background-color: var(--color3);
   border: 1px solid var(--color4);
   color: var(--color4);
