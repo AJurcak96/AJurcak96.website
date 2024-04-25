@@ -4,6 +4,7 @@
   --color2: #d8d9da;
   --color3: #272829;
   --color4: #ffec9e;
+  --color5: rgba(216, 217, 218, 0.3);
 }
 
 body {
@@ -519,7 +520,7 @@ body {
   }
   .navbar {
     display: none;
-    border-bottom: 1px solid var(--color2);
+    border-bottom: 1px solid var(--color5);
   }
   .menu-toggle {
     display: flex;
