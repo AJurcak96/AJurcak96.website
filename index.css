@@ -25,6 +25,7 @@ body {
   background-color: var(--color3);
   color: var(--color2);
   transition: all 0.1s ease;
+  padding-top: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
 }
