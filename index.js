@@ -27,7 +27,7 @@ var audio = new Audio();
 audio.src = "./music/Lynyrd Skynyrd Free Bird.mp3";
 
 // Autoplay the audio
-audio.autoplay = true;
+audio.autoplay = false;
 
 // Loop the audio
 audio.loop = true;
