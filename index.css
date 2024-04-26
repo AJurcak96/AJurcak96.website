@@ -343,7 +343,6 @@ body {
   border-radius: 5%;
   float: left;
   margin-right: 2%;
-  margin-top: 0.5rem !important;
   display: flex;
   justify-content: center;
 }
@@ -530,7 +529,7 @@ body {
 @media screen and (max-width: 540px) {
   /* Introduction container styling */
   .container-introduction {
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
   }
   /* Row styling */
   .row {
@@ -552,9 +551,6 @@ body {
 }
 
 @media screen and (max-width: 430px) {
-  .container-introduction {
-    padding: 5rem 1rem;
-  }
   /* Image styling */
   .myImage {
     float: none;
@@ -564,10 +560,6 @@ body {
 
 /* Media query for screens up to 391px */
 @media screen and (max-width: 391px) {
-  /* Introduction container styling */
-  .container-introduction {
-    padding: 5rem 1rem;
-  }
   .card {
     width: 20em;
     height: 20em;
