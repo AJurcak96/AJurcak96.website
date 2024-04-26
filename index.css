@@ -68,9 +68,17 @@ body {
 
 /* Button hover effect */
 .btnMusic:hover {
-  background-color: white;
+  background-color: var(--color3);
   color: var(--color3);
   border: 2px solid var(--color3);
+}
+
+.btnMusic:hover .speaker-icon {
+  color: var(--color4);
+}
+
+.btnMusic:hover .speaker-icon-off {
+  color: var(--color4);
 }
 
 /* Button active effect */
@@ -78,6 +86,27 @@ body {
   background-color: var(--color1);
   color: var(--color3);
   border: 2px solid var(--color3);
+}
+
+/* Speaker icon svg */
+.speaker-icon {
+  color: var(--color2);
+}
+
+/* Speaker icon svg - HOVER */
+.speaker-icon:hover {
+  color: var(--color3);
+}
+
+/* Speaker icon off svg*/
+.speaker-icon-off {
+  color: var(--color2);
+  display: none;
+}
+
+/* Speaker icon off svg - HOVER */
+.speaker-icon-off:hover {
+  color: var(--color3);
 }
 
 /* Styling for general buttons */
@@ -94,15 +123,14 @@ body {
 /* Button hover effect */
 .btn:hover,
 .transparent-btn:hover {
-  background-color: white;
-  color: var(--color3);
+  background-color: var(--color3);
+  color: var(--color4);
 }
 
 /* Custom popover styling */
 .custom-popover,
 .custom-popover .popover-body {
   background-color: var(--color4);
-  border: 1px solid var(--color4);
 }
 
 /* Custom popover - HEADER */
@@ -114,6 +142,7 @@ body {
 #popoverBtn {
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 /* Popover body styling */
@@ -326,6 +355,8 @@ body {
   float: left;
   margin-right: 2%;
   margin-top: 0.5rem !important;
+  display: flex;
+  justify-content: center;
 }
 
 /* Wrapper introduction 'Hello' */
@@ -494,11 +525,6 @@ body {
 
 /* Media query for screens up to 600px */
 @media screen and (max-width: 600px) {
-  .myImage {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .card {
     width: 20em;
     height: 16em;
