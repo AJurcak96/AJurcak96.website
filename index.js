@@ -87,7 +87,7 @@ const popoverBtn = document.getElementById("popoverBtn"); // Assuming popoverBtn
 const toggleMusic = document.getElementById("toggleMusic");
 const toggleButton = document.getElementById("toggleMusic");
 const volume = document.getElementById("volume");
-const volumeOff = document.getElementById("volumeOFF");
+const volumeOFF = document.getElementById("volumeOFF");
 let isVolumeOn = false;
 
 toggleButton.addEventListener("click", () => {
