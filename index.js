@@ -52,10 +52,8 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleButton.addEventListener("click", function () {
     if (bgMusic.paused) {
       bgMusic.play();
-      musicIcon.textContent = "🔊"; // Speaker symbol when playing
     } else {
       bgMusic.pause();
-      musicIcon.textContent = "🔇"; // Muted speaker symbol when paused
     }
   });
 });
@@ -65,6 +63,7 @@ window.onscroll = function () {
   scrollFunction();
 };
 
+// Function to show scroll to the top button
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("scrollToTopBtn").style.display = "block";
@@ -83,16 +82,33 @@ function scrollToTop() {
 
 // Select the menu toggle element
 const menuToggle = document.querySelector(".menu-toggle");
+const headerNavButtons = [...document.querySelectorAll(".navbar")]; // Assuming headerNavButtons are other buttons in the header
+const popoverBtn = document.getElementById("popoverBtn"); // Assuming popoverBtn is another button
+const toggleMusic = document.getElementById("toggleMusic");
+const toggleButton = document.getElementById("toggleMusic");
+const volume = document.getElementById("volume");
+const volumeOff = document.getElementById("volumeOFF");
+let isVolumeOn = false;
 
-// Select the buttons inside the header nav link
-const headerNavButtons = document.querySelectorAll(".navbar");
+toggleButton.addEventListener("click", () => {
+  isVolumeOn = !isVolumeOn;
+  if (isVolumeOn) {
+    volume.style.display = "inline";
+    volumeOff.style.display = "none";
+  } else {
+    volume.style.display = "none";
+    volumeOff.style.display = "inline";
+  }
+});
 
 // Function to handle clicks anywhere else on the document
 function handleClickOutside(event) {
-  // Check if the clicked element is not the menu toggle, its child, one of the buttons, or the input field
+  // Check if the clicked element is not the menu toggle, its child, one of the buttons
   if (
     !menuToggle.contains(event.target) &&
-    ![...headerNavButtons].includes(event.target)
+    ![...headerNavButtons, popoverBtn, toggleMusic, volume, volumeOFF].includes(
+      event.target
+    )
   ) {
     // Collapse the menu by removing the 'active' class from the menu toggle
     menuToggle.classList.remove("active");
