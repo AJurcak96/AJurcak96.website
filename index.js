@@ -87,7 +87,7 @@ const popoverBtn = document.getElementById("popoverBtn"); // Assuming popoverBtn
 const toggleMusic = document.getElementById("toggleMusic");
 const toggleButton = document.getElementById("toggleMusic");
 const volume = document.getElementById("volume");
-const volumeOFF = document.getElementById("volumeOFF");
+const volumeOff = document.getElementById("volumeOFF");
 let isVolumeOn = false;
 
 toggleButton.addEventListener("click", () => {
@@ -106,7 +106,7 @@ function handleClickOutside(event) {
   // Check if the clicked element is not the menu toggle, its child, one of the buttons
   if (
     !menuToggle.contains(event.target) &&
-    ![...headerNavButtons, popoverBtn, toggleMusic, volume, volumeOFF].includes(
+    ![...headerNavButtons, popoverBtn, toggleMusic, volume, volumeOff].includes(
       event.target
     )
   ) {
