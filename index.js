@@ -24,7 +24,7 @@ audio.volume = 0.4;
 var audio = new Audio();
 
 // Set the audio source
-audio.src = "./music/Lynyrd Skynyrd Free Bird.mp3";
+audio.src = "./ItAintMe-CCR.mp3";
 
 // Autoplay the audio
 audio.autoplay = false;
