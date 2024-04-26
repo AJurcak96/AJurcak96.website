@@ -98,17 +98,6 @@ body {
   color: var(--color3);
 }
 
-/* Speaker icon off svg*/
-.speaker-icon-off {
-  color: var(--color2);
-  display: none;
-}
-
-/* Speaker icon off svg - HOVER */
-.speaker-icon-off:hover {
-  color: var(--color3);
-}
-
 /* Styling for general buttons */
 .btn,
 .transparent-btn {
