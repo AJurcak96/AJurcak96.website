@@ -148,7 +148,7 @@ body {
   max-width: 100%;
   box-sizing: border-box;
   margin: 0;
-  padding: 5rem 5rem;
+  padding: 5rem 1rem;
   border-bottom: 1px solid var(--color4);
   display: flex;
   justify-content: center;
@@ -332,7 +332,7 @@ body {
 
 /* Image container */
 .imageDiv {
-  padding: 0 1rem;
+  padding: 0;
 }
 
 /* Image styling */
@@ -479,6 +479,9 @@ body {
 
 /* for screens up to 991px */
 @media screen and (max-width: 991px) {
+  .container-introduction {
+    padding: 5rem 2rem;
+  }
   .container {
     grid-template-columns: repeat(1, 1fr);
     height: 100%;
@@ -527,7 +530,7 @@ body {
 @media screen and (max-width: 540px) {
   /* Introduction container styling */
   .container-introduction {
-    padding: 2rem 5rem;
+    padding: 2rem 1rem;
   }
   /* Row styling */
   .row {
@@ -541,11 +544,21 @@ body {
     display: flex;
     justify-content: right;
   }
+  /* Image styling */
+  .myImage {
+    width: 100%;
+    max-height: 80vh;
+  }
 }
 
 @media screen and (max-width: 430px) {
   .container-introduction {
-    padding: 2rem 4rem;
+    padding: 5rem 1rem;
+  }
+  /* Image styling */
+  .myImage {
+    float: none;
+    margin-right: 0;
   }
 }
 
@@ -553,7 +566,7 @@ body {
 @media screen and (max-width: 391px) {
   /* Introduction container styling */
   .container-introduction {
-    padding: 2rem 3rem;
+    padding: 5rem 1rem;
   }
   .card {
     width: 20em;
@@ -587,8 +600,6 @@ body {
 @media screen and (max-width: 320px) {
   .Introduction {
     font-size: 1.4em;
-    margin-left: 1.3em;
-    margin-right: 1.3em;
   }
   .card {
     width: 15em;
